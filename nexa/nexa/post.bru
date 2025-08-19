@@ -1,0 +1,43 @@
+meta {
+  name: post
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8081/api/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "firstName": "Harvey",
+    "lastName": "Specter",
+    "dob": "1988-04-24",
+    "gender": "Male",
+    "email": "harvey.s@example.com",
+    "phone": "556-124-4568",
+    "annualSalary": 850000.00,
+    "creditScore": 850
+  }
+  
+}
+
+tests {
+  {
+    "firstName": "Harvey",
+    "lastName": "Specter",
+    "dob": "1988-04-24",
+    "gender": "Male",
+    "email": "harvey.s@example.com",
+    "phone": "556-124-4568",
+    "annualSalary": 850000.00,
+    "creditScore": 850
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}
